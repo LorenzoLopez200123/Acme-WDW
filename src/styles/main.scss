@@ -1,0 +1,30 @@
+@import 'variables';
+
+// reset html native css and add support
+
+@import 'normalize';
+
+// import bootstrap
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// screens components imports
+
+// @import url('components/screens/Gallery/index.module.scss');
+
+// components imports
+
+@import './components/layout.scss';
+@import './components/_footer.scss';
+@import './components/cardItem.scss';
+@import './components/_itemList.scss';
+@import './components/_navigationHeaderInfo.scss';
+
+// global styles
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

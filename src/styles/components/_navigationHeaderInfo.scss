@@ -1,0 +1,16 @@
+.header-hero-background {
+  background-image: $hero-img;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: clamp(5.25rem, 20vw, 13rem);
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+  align-items: flex-end;
+  padding: 0.75rem;
+}
+
+.hero-title {
+  color: $white;
+  letter-spacing: 2px;
+}
