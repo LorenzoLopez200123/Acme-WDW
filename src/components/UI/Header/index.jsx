@@ -1,6 +1,13 @@
-import { Button, Col, Container, Navbar, NavbarBrand, Row } from 'reactstrap'
+import { Col, Container, Navbar, NavbarBrand, Row } from 'reactstrap'
 import LogoType from 'components/UI/LogoType'
+import LoginBtn from 'components/UI/LoginBtn'
+import BurguerBtn from 'components/UI/BurguerBtn'
 
+/**
+ * Header component
+ *
+ * @returns {React.ReactElement}
+ */
 function Header() {
   return (
     <>
@@ -11,9 +18,10 @@ function Header() {
               <NavbarBrand>
                 <LogoType />
               </NavbarBrand>
-              <Button size='small' color='primary' variant='outline-info'>
-                Login
-              </Button>
+              <div className={'container-btn--header'}>
+                <LoginBtn className={'login-btn--header'} />
+                <BurguerBtn className={'burguer-menu--header'} />
+              </div>
             </Col>
           </Row>
         </Container>

@@ -5,6 +5,11 @@ import { Row, Col, Button } from 'reactstrap'
 
 const test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+/**
+ * List of cards Component
+ *
+ * @returns {React.ReactElement}
+ */
 export default function ItemList() {
   return (
     <>

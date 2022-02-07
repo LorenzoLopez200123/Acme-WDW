@@ -10,15 +10,14 @@
 
 // screens components imports
 
-// @import url('components/screens/Gallery/index.module.scss');
-
 // components imports
 
-@import './components/layout.scss';
-@import './components/_footer.scss';
-@import './components/cardItem.scss';
-@import './components/_itemList.scss';
-@import './components/_navigationHeaderInfo.scss';
+@import './components/layout';
+@import './components/header';
+@import './components/footer';
+@import './components/cardItem';
+@import './components/itemList';
+@import './components/navigationHeaderInfo';
 
 // global styles
 body {

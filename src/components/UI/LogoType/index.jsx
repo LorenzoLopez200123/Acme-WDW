@@ -4,9 +4,10 @@ import LogoWhite from 'assets/img/logo-white.svg'
 
 /**
  * logo to be used
- * @param {white} boolean
- * @param {size=} string
- * @returns {React.Component}
+ * @param {Object} args
+ * @param {boolean} args.white
+ * @param {string=} args.size
+ * @returns {ReactElement}
  */
 export default function LogoType({ white, size = '100%' }) {
   return (

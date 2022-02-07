@@ -2,6 +2,11 @@ import React from 'react'
 import { Container } from 'reactstrap'
 import LogoType from 'components/UI/LogoType'
 
+/**
+ * Footer component
+ *
+ * @returns {React.ReactElement}
+ */
 export default function Footer() {
   return (
     <footer className='footer'>
