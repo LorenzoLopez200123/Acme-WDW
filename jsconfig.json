@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "components/*": ["src/components/*"],
+      "services/*": ["src/services/*"],
+      "styles/*": ["src/styles/*"],
+      "conf": ["src/conf/"],
+      "utils/*": ["src/utils/*"],
+      "assets/*": ["src/assets/*"],
+      "hooks/*": ["src/hooks/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules/"]
+}
