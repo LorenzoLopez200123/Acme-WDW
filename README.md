@@ -6,7 +6,7 @@ Desarrollado con VITE, Sass y Bootstrap.
 
 ## Features TODO
 
-- [x] Configure project and install tools (dinamic routes conf, helmet for SEO, eslint, prettier)
+- [x] Configure project and install tools (dinamic routes conf, eslint, prettier)
 - [x] Make layout Gallery view
 - [ ] Mockup data to make future request
 - [ ] Add functionality searchBar
