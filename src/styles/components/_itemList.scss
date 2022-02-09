@@ -1,50 +1,19 @@
-.row-container-search {
-  margin-top: 1em;
-
-  .col-container-search {
-    display: flex;
-    align-self: center;
-
-    .text-search-component {
-      color: #888888;
-      font-size: 20px;
-      height: fit-content;
-      letter-spacing: 0.01em;
-      line-height: 23px;
-      margin-block: auto;
-      padding-inline: 1em;
-      white-space: nowrap;
-    }
-
-    .search-component {
-      background-color: #ececec;
-
-      .MuiSvgIcon-root {
-        fill: #{$white};
-      }
-
-      .MuiIconButton-root {
-        transition: background-color 0.3s ease-in-out;
-
-        &:hover {
-          background-color: #{$primary};
-          opacity: 0.6;
-          transition: background-color 0.3s ease-in-out;
-        }
-      }
-    }
-  }
-}
-
 .container-item-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
+  grid-column-gap: 2em;
   margin-block: 1rem;
   width: 100%;
 
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+  }
+
   @include media-breakpoint-down(md) {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 }

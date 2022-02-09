@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import CardItem from 'components/UI/CardItem'
-import SearchBar from 'material-ui-search-bar'
+import SearchBar from 'components/UI/SearchBar'
 import { Row, Col, Button, Spinner } from 'reactstrap'
 import { useAxios } from 'hooks/useAxios'
+import env from 'conf/config'
 
 /**
  * List of cards Component
@@ -18,9 +19,7 @@ export default function ItemList() {
 
   useEffect(() => {
     if (page <= MAX_PAGE) {
-      setUrl(
-        `https://6201ff96b8735d00174cb69a.mockapi.io/api/post?page=${page}&limit=${limit}`
-      )
+      setUrl(`${env.GET_POSTS_URL}?page=${page}&limit=${limit}`)
     }
   }, [page])
 
@@ -56,9 +55,8 @@ export default function ItemList() {
     return (
       <>
         <Row className='d-flex justify-content-end row-container-search'>
-          <Col className='col-lg-6 col-md-6 col-sm-12 d-flex col-container-search justify-content-end'>
-            <span className='text-search-component'>Search by #</span>
-            <SearchBar placeholder='' className='search-component' />
+          <Col className='col-lg-6 col-md-12 col-sm-12 d-flex col-container-search justify-content-end'>
+            <SearchBar />
           </Col>
         </Row>
         <Row>

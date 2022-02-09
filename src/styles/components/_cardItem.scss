@@ -1,13 +1,13 @@
 .card-item {
-  width: clamp(200px, 25vw, 350px);
+  width: 21.875rem;
+  min-height: 21.875rem;
   border-radius: 0.625rem;
   overflow: hidden;
-  margin-right: 1rem;
   margin-top: 2rem;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 
   @include media-breakpoint-down(md) {
-    width: 19.438rem;
+    width: 20.9375rem;
   }
 
   &:hover {
@@ -18,8 +18,15 @@
 
   .card-img-top {
     cursor: pointer;
-    width: 21.875rem;
-    height: 17.5rem;
+    width: 100%;
+    max-width: 350px;
+    min-height: 17.5rem;
+    object-fit: cover;
+    object-position: center;
+
+    @include media-breakpoint-down(md) {
+      min-height: 17.1rem;
+    }
   }
 }
 

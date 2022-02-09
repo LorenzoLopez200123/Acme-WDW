@@ -20,13 +20,7 @@ export default function CardItem({
 }) {
   return (
     <Card className={'card-item'}>
-      <CardImg
-        top
-        width='100%'
-        src={imageSrc}
-        alt='Card image cap'
-        className='card-img-top'
-      />
+      <CardImg top src={imageSrc} alt='image post' className='card-img-top' />
       <CardFooter>
         <Container className='d-flex align-items-start p-0'>
           <Avatar unstyled className={'details-avatar'} src={avatar} round />

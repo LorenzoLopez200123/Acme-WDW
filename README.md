@@ -8,9 +8,9 @@ Desarrollado con VITE, Sass y Bootstrap.
 
 - [x] Configure project and install tools (dinamic routes conf, eslint, prettier)
 - [x] Make layout Gallery view
-- [ ] Mockup data to make future request
+- [x] Mockup data to make future request
 - [ ] Add functionality searchBar
-- [ ] Add functionality load more button
+- [x] Add functionality load more button
 - [ ] Add React Router to implement more pages in the future
 - [ ] Deploy Ghpages
 
