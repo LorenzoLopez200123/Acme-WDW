@@ -2,17 +2,24 @@
 
 ## _Challenge_
 
-Desarrollado con VITE, Sass y Bootstrap.
+Desarrollado con VITE, Sass y Bootstrap optimizado con PostCss .
 
 ## Features TODO
 
 - [x] Configure project and install tools (dinamic routes conf, eslint, prettier)
 - [x] Make layout Gallery view
 - [x] Mockup data to make future request
-- [ ] Add functionality searchBar
+- [x] Add functionality searchBar
 - [x] Add functionality load more button
-- [ ] Add React Router to implement more pages in the future
 - [ ] Deploy Ghpages
+
+## Features suggested in the future
+
+- [ ] Add Welcome Screen
+- [ ] Add smooth loading transition for cards
+- [ ] Improve dynamic search call with api request
+- [ ] Add React Router to implement more pages in the future
+- [ ] Implement Login Functionality whit AUth0
 
 ## Installation
 

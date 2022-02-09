@@ -16,6 +16,7 @@ export default function ItemList() {
   const [page, setPage] = useState(1)
   const [dataRecopiled, setdataRecopiled] = useState([])
   const [{ data, isLoading, isError }, setUrl] = useAxios()
+  const [searchInput, setSearchInput] = useState('')
 
   useEffect(() => {
     if (page <= MAX_PAGE) {
@@ -35,6 +36,10 @@ export default function ItemList() {
     setPage((page) => (page <= MAX_PAGE ? page + 1 : page))
   }
 
+  const searchItems = (searchValue) => {
+    setSearchInput(searchValue)
+  }
+
   if (isError) {
     return (
       <div className='w-100 d-flex justify-content-center align-items-center text-danger container-main-centered'>
@@ -51,25 +56,32 @@ export default function ItemList() {
     )
   }
 
-  if (dataRecopiled && dataRecopiled.length > 0) {
+  if (dataRecopiled && dataRecopiled.length) {
     return (
       <>
         <Row className='d-flex justify-content-end row-container-search'>
           <Col className='col-lg-6 col-md-12 col-sm-12 d-flex col-container-search justify-content-end'>
-            <SearchBar />
+            <SearchBar searchItems={searchItems} />
           </Col>
         </Row>
         <Row>
           <Col className={'container-item-list'}>
-            {dataRecopiled.map((e) => (
-              <CardItem
-                key={e?.id}
-                name={e?.name}
-                imageSrc={e?.image}
-                tag={e?.tag}
-                avatar={e?.avatar}
-              />
-            ))}
+            {dataRecopiled
+              .filter((item) => {
+                return Object.values(item.tag)
+                  .join('')
+                  .toLowerCase()
+                  .includes(searchInput.toLowerCase())
+              })
+              .map((e) => (
+                <CardItem
+                  key={e?.id}
+                  name={e?.name}
+                  imageSrc={e?.image}
+                  tag={e?.tag}
+                  avatar={e?.avatar}
+                />
+              ))}
           </Col>
           <div className='d-flex justify-content-center'>
             <Button
@@ -83,5 +95,11 @@ export default function ItemList() {
         </Row>
       </>
     )
-  } else return <p>Loading...</p>
+  } else {
+    return (
+      <div className='d-flex justify-content-center align-items-center w-100 container-main-centered'>
+        <Spinner color='primary' className='spinner-component' />
+      </div>
+    )
+  }
 }
