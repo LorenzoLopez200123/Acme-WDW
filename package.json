@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "0.25.0",
@@ -29,6 +30,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-promise": "5.2.0",
     "eslint-plugin-react": "7.28.0",
+    "gh-pages": "^3.2.3",
     "jsdoc": "3.6.10",
     "node-sass": "7.0.1",
     "postcss-import": "14.0.2",

@@ -4,6 +4,8 @@
 
 Desarrollado con VITE, Sass y Bootstrap optimizado con PostCss .
 
+[Click here to visit the page](https://lorenzolopez200123.github.io/Acme-WDW/)
+
 ## Features TODO
 
 - [x] Configure project and install tools (dinamic routes conf, eslint, prettier)
@@ -11,7 +13,7 @@ Desarrollado con VITE, Sass y Bootstrap optimizado con PostCss .
 - [x] Mockup data to make future request
 - [x] Add functionality searchBar
 - [x] Add functionality load more button
-- [ ] Deploy Ghpages
+- [x] Deploy Ghpages
 
 ## Features suggested in the future
 
