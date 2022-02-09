@@ -1,0 +1,21 @@
+{
+  "parser": "postcss-scss",
+  "map": false,
+  "plugins": {
+    "postcss-import": {
+      "root": "./"
+    }
+  },
+  "postcss-url": {},
+  "postcss-plugin": {},
+  "autoprefixer": {
+    "browsers": ["> 1%", "last 2 versions", "Firefox ESR", "not ie < 9"],
+    "flexbox": "no-2009"
+  },
+  "cssnano": {
+    "preset": "default",
+    "discardComments": {
+      "removeAll": true
+    }
+  }
+}
